@@ -1,0 +1,16 @@
+# resets your yubikey back to the current key
+function yk-reset() {
+  gpg --with-keygrip --list-secret-keys jakdept@gmail.com 2>/dev/null|
+    awk '$1 ~ /Keygrip/ {print $3}'|
+    while read keygrip; do
+    rm -f ~/.gnupg/private-keys-v1.d/${keygrip}.key;
+  done
+  gpgconf --kill gpg-agent
+  kill $SSH_AGENT_PID &>/dev/null
+  export GPG_TTY="$(tty)"
+  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  gpgconf --launch gpg-agent
+  /usr/bin/env gpg --card-status
+  /usr/bin/env ssh-add -L
+  echo UPDATESTARTUPTTY | gpg-connect-agent
+}
