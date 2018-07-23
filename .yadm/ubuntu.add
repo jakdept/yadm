@@ -1,6 +1,8 @@
 vim
 xsel
 tmux
+apt-file
+golang
 git
 gnupg2
 gnupg-agent

@@ -24,3 +24,4 @@ sudo usermod -aG docker $USER
 sudo usermod -s $(which zsh)
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+sudo apt-file update
