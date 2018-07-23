@@ -5,9 +5,10 @@ gpg --with-keygrip --list-secret-keys jakdept@gmail.com|
 	rm -f ~/.gnupg/private-keys-v1.d/${keygrip}.key;
 done
 gpgconf --kill gpg-agent
-kill $SSH_AGENT_PID
+kill $SSH_AGENT_PID &>/dev/null
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
-/usr/bin/env gpg --card-status >/dev/null
-/usr/bin/env ssh-add -L >/dev/null
+/usr/bin/env gpg --card-status &>/dev/null
+/usr/bin/env ssh-add -L &>/dev/null
+echo UPDATESTARTUPTTY | gpg-connect-agent &>/dev/null
