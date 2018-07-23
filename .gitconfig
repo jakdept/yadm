@@ -1,0 +1,26 @@
+[user]
+	email = jakdept@gmail.com
+	name = Jack Hayhurst
+[push]
+	default = current
+[pull]
+	default = current
+[alias]
+	count   = !git shortlog -sn
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[core]
+	editor = vim

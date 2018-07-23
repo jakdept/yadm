@@ -4,6 +4,7 @@ tmux
 apt-file
 golang
 git
+git-lfs
 gnupg2
 gnupg-agent
 scdaemon
