@@ -1,0 +1,136 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.formatOnSave": false,
+    "go.formatTool": "goreturns",
+    "go.buildOnSave": "package",
+    // Run Lint tool on save.
+    "go.lintOnSave": "package",
+    // Specifies Lint tool name.
+    "go.lintTool": "gometalinter",
+    // https://github.com/alecthomas/gometalinter#supported-linters
+    "go.lintFlags": [
+        "--disable-all",
+        "--enable=vet",
+        // "--enable=deadcode",
+        "--enable=golint",
+        // "--enable=varcheck",
+        // "--enable=structcheck",
+        // "--enable=errcheck",
+        "--enable=ineffassign",
+        "--enable=interfacer",
+        // "--enable=unconvert",
+        "--enable=goconst",
+        "--enable=gosimple",
+        "--enable=staticcheck",
+        "--enable=goconst",
+        // "--enable=lll",
+        "--line-length=80",
+        "--enable=misspell"
+        // "--enable=unused"
+    ],
+    "go.vetOnSave": "package",
+    "go.coverOnSave": true,
+    "go.goroot": "/usr/local/Cellar/go/1.10.1/libexec",
+    "editor.rulers": [
+        80
+    ],
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 160,
+    "workbench.activityBar.visible": false,
+    "editor.wrappingIndent": "indent",
+    "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 12,
+    "terminal.integrated.fontFamily": "Hack, Menlo, Monaco, Consolas, \"Droid Sans Mono\", \"Courier New\", monospace, \"Droid Sans Fallback\"",
+    "editor.tabSize": 2,
+    "window.zoomLevel": 0,
+    "search.useIgnoreFiles": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "python.pythonPath": "python3.5",
+    "files.autoSave": "onFocusChange",
+    "window.menuBarVisibility": "toggle",
+    "git.autofetch": false,
+    "workbench.colorTheme": "WarpOS",
+    "markdown.preview.doubleClickToSwitchToEditor": false,
+    "vim.foldfix": true,
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "Z",
+                "Z"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                },
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-b>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.toggleSidebarVisibility",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<cmd-d>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-s>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-w>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "files.associations": {
+        "*.plist": "xml"
+    },
+    "editor.minimap.enabled": false,
+    "diffEditor.renderSideBySide": false,
+    "editor.fontLigatures": true,
+    "editor.parameterHints": false,
+    "material-icon-theme.showUpdateMessage": false,
+    "workbench.editor.labelFormat": "short",
+    "git.enableSmartCommit": true,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": false
+}
