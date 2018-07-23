@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# install vscode extensions
+code --install-extension gerane.Theme-WarpOS
+code --install-extension PKief.material-icon-theme
+code --install-extension vscodevim.vim
+code --install-extension 1dot75cm.RPMSpec
+code --install-extension Compulim.compulim-vscode-closetag
+code --install-extension HookyQR.beautify
+code --install-extension MattiasPernhult.vscode-todo
+code --install-extension PeterJausovec.vscode-docker
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension donjayamanne.githistory
+code --install-extension donjayamanne.python
+code --install-extension formulahendry.auto-rename-tag
+code --install-extension lukehoban.Go
+code --install-extension tht13.python
+code --install-extension waderyan.gitblame
+
+# add user to docker group
+sudo usermod -aG docker $USER
