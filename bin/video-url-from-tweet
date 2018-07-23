@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+if [ "$1" ]; then
+	url=$1
+else
+	echo "Must provide a url"
+	return 1
+fi
+
+curl --silent $url |
+	# should find the <meta> tag with content="<thumbnail url>"
+	(grep -m1 "tweet_video_thumb" ||
+	echo "Could not find video" && return 1) |
+
+		# from: <meta property="og:image" content="https://pbs.twimg.com/tweet_video_thumb/xxxxxxxxxx.jpg">
+		# to: https://pbs.twimg.com/tweet_video_thumb/xxxxxxxxxx.jpg
+		cut -d '"' -f 4 |
+
+		# from: https://pbs.twimg.com/tweet_video_thumb/xxxxxxxxxx.jpg
+		# to: https://video.twimg.com/tweet_video/xxxxxxxxxx.mp4
+		sed 's/.jpg/.mp4/g' |
+		sed 's/pbs.twimg.com\/tweet_video_thumb/video.twimg.com\/tweet_video/g'

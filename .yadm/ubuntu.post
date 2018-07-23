@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# install go scripts
+go get -u mvdan.cc/sh/cmd/shfmt
+
 # install vscode extensions
 code --install-extension gerane.Theme-WarpOS
 code --install-extension PKief.material-icon-theme
@@ -13,9 +16,10 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension donjayamanne.githistory
 code --install-extension donjayamanne.python
 code --install-extension formulahendry.auto-rename-tag
-code --install-extension lukehoban.Go
+code --install-extension ms-vscode.Go
 code --install-extension tht13.python
 code --install-extension waderyan.gitblame
+code --install-extension foxundermoon.shell-format
 
 # add user to docker group
 sudo usermod -aG docker $USER

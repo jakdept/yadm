@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+if [ "$1" ]; then
+	url=$1
+else
+	echo "Must provide a url"
+	return 1
+fi
+curl $(video-url-from-tweet $url)

@@ -76,8 +76,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-unsetopt correct
-
 if [[ $(uname) == "Linux" ]]; then
 	for file in ~/.yadm/zshrc.d/*.zsh; do
 		source "$file"

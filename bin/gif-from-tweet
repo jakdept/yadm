@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+if [ "$2" ]; then
+	url=$1
+	output=$2
+else
+	echo "Must provide a url and an output filename"
+	return 1
+fi
+video-from-tweet $url | video-to-gif - $output
