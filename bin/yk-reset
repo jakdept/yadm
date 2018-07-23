@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-gpg --with-keygrip --list-secret-keys jakdept@gmail.com|
+gpg --with-keygrip --list-secret-keys jakdept@gmail.com 2>/dev/null|
 	awk '$1 ~ /Keygrip/ {print $3}'|
 	while read keygrip; do
 	rm -f ~/.gnupg/private-keys-v1.d/${keygrip}.key;
