@@ -19,3 +19,8 @@ code --install-extension waderyan.gitblame
 
 # add user to docker group
 sudo usermod -aG docker $USER
+
+# set up oh-my-zsh
+sudo usermod -s $(which zsh)
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
