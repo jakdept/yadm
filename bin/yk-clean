@@ -4,6 +4,10 @@ gpg --with-keygrip --list-secret-keys jakdept@gmail.com|
 	while read keygrip; do
 	rm -f ~/.gnupg/private-keys-v1.d/${keygrip}.key;
 done
-killall ssh-agent gpg-agent
-/usr/bin/env gpg --card-status
-/usr/bin/env ssh-add -L
+gpgconf --kill gpg-agent
+kill $SSH_AGENT_PID
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+/usr/bin/env gpg --card-status >/dev/null
+/usr/bin/env ssh-add -L >/dev/null
