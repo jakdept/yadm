@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+gpg --with-keygrip --list-secret-keys jakdept@gmail.com|
+	awk '$1 ~ /Keygrip/ {print $3}'|
+	while read keygrip; do
+	rm -f ~/.gnupg/private-keys-v1.d/${keygrip}.key;
+done
+killall ssh-agent gpg-agent
+/usr/bin/env gpg --card-status
+/usr/bin/env ssh-add -L
