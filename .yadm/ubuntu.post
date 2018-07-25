@@ -22,6 +22,7 @@ if which code; then
 	code --install-extension 1dot75cm.RPMSpec
 	code --install-extension Compulim.compulim-vscode-closetag
 	code --install-extension HookyQR.beautify
+	code --install-extension quicktype.quicktype
 	code --install-extension MattiasPernhult.vscode-todo
 	code --install-extension PeterJausovec.vscode-docker
 	code --install-extension dbaeumer.vscode-eslint
