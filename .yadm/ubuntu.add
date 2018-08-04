@@ -1,5 +1,4 @@
 vim
-insync
 xsel
 tmux
 apt-file
@@ -22,3 +21,6 @@ thefuck
 python-pkg-resources
 bats
 feh
+silversearcher-ag
+insync
+i3blocks

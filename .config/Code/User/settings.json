@@ -52,7 +52,7 @@
     "workbench.colorTheme": "WarpOS",
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "vim.foldfix": true,
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
                 "Z",
