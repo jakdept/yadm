@@ -2,7 +2,6 @@ vim
 xsel
 tmux
 apt-file
-golang
 git
 git-lfs
 gnupg2
@@ -20,7 +19,6 @@ fonts-hack-web
 thefuck
 python-pkg-resources
 bats
-feh
 silversearcher-ag
 insync
-i3blocks
+fonts-font-awesome

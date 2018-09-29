@@ -11,6 +11,7 @@ if which go; then
 	go get -u github.com/jessfraz/dockfmt
 	go get -u github.com/jessfraz/battery
 	go get -u github.com/google/gops
+	go get -u golang.org/x/tools/cmd/godoc
 fi
 
 if which code; then
@@ -47,5 +48,5 @@ if which zsh &>/dev/null; then
 	sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 fi
 
-
 sudo apt-file update
+sudo apt-get update
