@@ -38,7 +38,7 @@
     "workbench.activityBar.visible": false,
     "editor.wrappingIndent": "indent",
     "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 12,
+    "editor.fontSize": 14,
     "terminal.integrated.fontFamily": "Hack, Menlo, Monaco, Consolas, \"Droid Sans Mono\", \"Courier New\", monospace, \"Droid Sans Fallback\"",
     "editor.tabSize": 2,
     "window.zoomLevel": 0,
@@ -52,73 +52,14 @@
     "workbench.colorTheme": "WarpOS",
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "vim.foldfix": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "Z",
-                "Z"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                },
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<C-b>"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.toggleSidebarVisibility",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<cmd-d>"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<C-s>"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<C-w>"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ]
-        }
-    ],
+    "vim.handleKeys": {
+        "<C-d>": false,
+        "<C-s>": false,
+        "<C-f>": false,
+        "<C-b>": false,
+        "<C-n>": false,
+        "<C-w>": false
+    },
     "workbench.iconTheme": "material-icon-theme",
     "files.associations": {
         "*.plist": "xml"
@@ -126,7 +67,7 @@
     "editor.minimap.enabled": false,
     "diffEditor.renderSideBySide": false,
     "editor.fontLigatures": true,
-    "editor.parameterHints": false,
+    "gitlab.instanceUrl": "https://git.liquidweb.com",
     "material-icon-theme.showUpdateMessage": false,
     "workbench.editor.labelFormat": "short",
     "git.enableSmartCommit": true,

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# install go
+lynx -dump -listonly -nonumbers https://golang.org/dl | grep linux | grep amd64| grep tar.gz|head -n1|xargs curl --silent | sudo tar -C /usr/local -xz
+
 if which go; then
 	echo "installing go packages"
 	# install go scripts
@@ -42,11 +45,13 @@ getent group docker &>/dev/null && sudo usermod -aG docker $USER
 which slack &>/dev/null || sudo snap install slack --classic
 
 if which zsh &>/dev/null; then
-	echo "installing oh-my-zsh"
-	# set up oh-my-zsh
-	sudo usermod -s $(which zsh)
-	sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-	chsh -s /usr/bin/zsh
+	if ! [[ -d ~/.oh-my-zsh ]]; then
+	  echo "installing oh-my-zsh"
+	  # set up oh-my-zsh
+	  sudo usermod -s $(which zsh)
+	  sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+	  chsh -s /usr/bin/zsh
+	fi
 fi
 
 sudo apt-file update
