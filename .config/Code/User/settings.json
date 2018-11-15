@@ -72,5 +72,6 @@
     "workbench.editor.labelFormat": "short",
     "git.enableSmartCommit": true,
     "explorer.confirmDragAndDrop": false,
-    "extensions.ignoreRecommendations": false
+    "extensions.ignoreRecommendations": false,
+    "window.titleBarStyle": "custom"
 }
