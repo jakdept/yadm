@@ -58,7 +58,8 @@
         "<C-f>": false,
         "<C-b>": false,
         "<C-n>": false,
-        "<C-w>": false
+        "<C-w>": false,
+        "<C-E>": false
     },
     "workbench.iconTheme": "material-icon-theme",
     "files.associations": {
@@ -73,5 +74,7 @@
     "git.enableSmartCommit": true,
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": false,
-    "window.titleBarStyle": "custom"
+    "window.titleBarStyle": "custom",
+    "workbench.editor.showTabs": true,
+    "window.newWindowDimensions": "inherit"
 }
