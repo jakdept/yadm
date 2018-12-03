@@ -39,9 +39,13 @@ if which code; then
 	code --install-extension foxundermoon.shell-format
 fi
 
+# setup bluetooth driver
+echo "options bluetooth disable_esco=1" | sudo tee /etc/modprobe.d/bluetooth-tweaks.conf
+
 # add user to docker group
 getent group docker &>/dev/null && sudo usermod -aG docker $USER
 
+# maybe install slack?
 which slack &>/dev/null || sudo snap install slack --classic
 
 if which zsh &>/dev/null; then
