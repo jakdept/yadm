@@ -22,7 +22,7 @@ function yk-ssh() {
 }
 
 function yk-gpg() {
-	yk-masterKeys|xargs -I{} gpg --armor --export {}
+	yk-keys|xargs -I{} gpg --armor --export {} | pbcopy
 }
 
 function yk-encrypt() {
