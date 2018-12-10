@@ -6,41 +6,17 @@ lynx -dump -listonly -nonumbers https://golang.org/dl | grep linux | grep amd64|
 if which go; then
 	echo "installing go packages"
 	# install go scripts
-	go get -u mvdan.cc/sh/cmd/shfmt
-	go get -u github.com/rakyll/hey
-	go get -u github.com/rakyll/statik
-	go get -u github.com/davecheney/httpstat
-	go get -u github.com/jessfraz/udict
-	go get -u github.com/jessfraz/dockfmt
-	go get -u github.com/jessfraz/battery
-	go get -u github.com/google/gops
-	go get -u golang.org/x/tools/cmd/godoc
+	cat ~/.yadm/go.items | xargs go get -u
 fi
 
 if which code; then
 	echo "installing vscode extensions"
 	# install vscode extensions
-	code --install-extension gerane.Theme-WarpOS
-	code --install-extension PKief.material-icon-theme
-	code --install-extension vscodevim.vim
-	code --install-extension 1dot75cm.RPMSpec
-	code --install-extension Compulim.compulim-vscode-closetag
-	code --install-extension HookyQR.beautify
-	code --install-extension quicktype.quicktype
-	code --install-extension MattiasPernhult.vscode-todo
-	code --install-extension PeterJausovec.vscode-docker
-	code --install-extension dbaeumer.vscode-eslint
-	code --install-extension donjayamanne.githistory
-	code --install-extension donjayamanne.python
-	code --install-extension formulahendry.auto-rename-tag
-	code --install-extension ms-vscode.Go
-	code --install-extension tht13.python
-	code --install-extension waderyan.gitblame
-	code --install-extension foxundermoon.shell-format
+	cat ~/.yadm/code.items | xargs -L1 code --install-extension
 fi
 
 # setup bluetooth driver
-echo "options bluetooth disable_esco=1" | sudo tee /etc/modprobe.d/bluetooth-tweaks.conf
+# echo "options bluetooth disable_esco=1" | sudo tee /etc/modprobe.d/bluetooth-tweaks.conf
 
 # add user to docker group
 getent group docker &>/dev/null && sudo usermod -aG docker $USER

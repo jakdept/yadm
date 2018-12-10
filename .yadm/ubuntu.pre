@@ -2,9 +2,10 @@
 
 export $(cat /etc/lsb-release)
 
-tempdir=$(mktemp -d)
+certdir=$(mktemp -d)
 # add vscode repos
-sudo apt-key add <(wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor)
+wget -O ${certdir}/microsoft.pub https://packages.microsoft.com/keys/microsoft.asc
+sudo apt-key add ${certdir}/microsoft.pub
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
 # add insync repo
@@ -12,7 +13,8 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
 sudo sh -c 'echo "deb http://apt.insynchq.com/ubuntu ${DISTRIB_CODENAME} non-free contrib" > /etc/apt/sources.list.d/insync.list'
 
 # add chrome repo
-sudo apt-key add <(wget -O - https://dl.google.com/linux/linux_signing_key.pub)
+wget -O ${certdir}/google.pub https://dl.google.com/linux/linux_signing_key.pub)
+sudo apt-key add ${certdir}/google.pub
 sudo sh -c 'echo "deb [arc=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/chrome.list'
 
 sudo apt-get update

@@ -18,3 +18,6 @@ fonts-font-awesome
 zsh
 fonts-hack-ttf
 google-chrome-stable
+slack-desktop
+insync-headless
+lastpass-cli
