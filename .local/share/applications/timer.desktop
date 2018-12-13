@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Timer
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app=https://polytimer.rocks --window-size=200x200
+Icon=chrome-bmbniebmoflhomonmkjbhjdafagjnlpl-Default
+StartupWMClass=crx_bmbniebmoflhomonmkjbhjdafagjnlpl
