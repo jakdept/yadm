@@ -18,6 +18,14 @@ fi
 # setup bluetooth driver
 # echo "options bluetooth disable_esco=1" | sudo tee /etc/modprobe.d/bluetooth-tweaks.conf
 
+# setup trackpad
+gsettings set org.gnome.desktop.peripherals.touchpad speed 0.4
+gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag false
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
+gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
+
+
 # add user to docker group
 getent group docker &>/dev/null && sudo usermod -aG docker $USER
 

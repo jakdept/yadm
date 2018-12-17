@@ -78,5 +78,6 @@
     "extensions.ignoreRecommendations": false,
     "window.titleBarStyle": "custom",
     "workbench.editor.showTabs": true,
-    "window.newWindowDimensions": "inherit"
+    "window.newWindowDimensions": "inherit",
+    "workbench.settings.editor": "json"
 }
