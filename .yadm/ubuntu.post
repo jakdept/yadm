@@ -25,6 +25,11 @@ gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
 gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
 
+# change mediakeys back to what they should be
+gsettings set org.gnome.settings-daemon.plugins.media-keys play ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys next ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys previous ""
+
 
 # add user to docker group
 getent group docker &>/dev/null && sudo usermod -aG docker $USER
