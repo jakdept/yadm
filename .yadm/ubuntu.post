@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+mkdir ~/go ~/work
 # install go
 lynx -dump -listonly -nonumbers https://golang.org/dl | grep linux | grep amd64| grep tar.gz|head -n1|xargs curl --silent | sudo tar -C /usr/local -xz
 

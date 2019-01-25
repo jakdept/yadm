@@ -30,6 +30,9 @@
     ],
     "go.vetOnSave": "package",
     "go.coverOnSave": true,
+    "go.toolsEnvVars": {
+        "CGO_ENABLED": 1
+    },
     "editor.rulers": [
         80
     ],
@@ -45,7 +48,7 @@
     "search.useIgnoreFiles": false,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "python.pythonPath": "python3.5",
+    "python.pythonPath": "python3",
     "files.autoSave": "onFocusChange",
     "window.menuBarVisibility": "toggle",
     "git.autofetch": false,
@@ -79,5 +82,9 @@
     "window.titleBarStyle": "custom",
     "workbench.editor.showTabs": true,
     "window.newWindowDimensions": "inherit",
-    "workbench.settings.editor": "json"
+    "workbench.settings.editor": "json",
+    "workbench.statusBar.visible": true,
+    "markdownlint.customRules": [
+        "{docsmsft.docs-markdown}/markdownlint-custom-rules/rules.js"
+    ]
 }

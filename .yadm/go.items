@@ -1,0 +1,9 @@
+mvdan.cc/sh/cmd/shfmt
+github.com/rakyll/hey
+github.com/rakyll/statik
+github.com/davecheney/httpstat
+github.com/jessfraz/udict
+github.com/jessfraz/dockfmt
+github.com/jessfraz/battery
+github.com/google/gops
+golang.org/x/tools/cmd/godoc

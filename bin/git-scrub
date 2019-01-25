@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+git pull origin master
 git branch -d $(git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n')
 git fetch --all --prune
 git clean -fd
