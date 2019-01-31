@@ -7,3 +7,5 @@ github.com/jessfraz/dockfmt
 github.com/jessfraz/battery
 github.com/google/gops
 golang.org/x/tools/cmd/godoc
+github.com/rakyll/gotest
+github.com/inancgumus/godocc

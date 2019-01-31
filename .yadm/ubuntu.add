@@ -26,3 +26,8 @@ yubikey-manager
 mate-calc
 httpie
 asciinema
+openconnect
+gitlab-runner
+docker-ce
+docker-ce-cli
+containerd.io

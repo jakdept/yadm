@@ -38,7 +38,7 @@
     ],
     "editor.wordWrap": "on",
     "editor.wordWrapColumn": 160,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "editor.wrappingIndent": "indent",
     "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 12,
@@ -83,8 +83,5 @@
     "workbench.editor.showTabs": true,
     "window.newWindowDimensions": "inherit",
     "workbench.settings.editor": "json",
-    "workbench.statusBar.visible": true,
-    "markdownlint.customRules": [
-        "{docsmsft.docs-markdown}/markdownlint-custom-rules/rules.js"
-    ]
+    "workbench.statusBar.visible": true
 }
