@@ -5,5 +5,5 @@ Terminal=false
 Type=Application
 Name=Timer
 Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app=https://polytimer.rocks --window-size=200x200
-Icon=chrome-bmbniebmoflhomonmkjbhjdafagjnlpl-Default
-StartupWMClass=crx_bmbniebmoflhomonmkjbhjdafagjnlpl
+Icon=~/.local/share/icons/alarm.png
+StartupWMClass=alarm_class
