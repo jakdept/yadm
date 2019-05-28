@@ -6,27 +6,30 @@
     // Run Lint tool on save.
     "go.lintOnSave": "package",
     // Specifies Lint tool name.
-    "go.lintTool": "gometalinter",
+    "go.lintTool": "golangci-lint",
     // https://github.com/alecthomas/gometalinter#supported-linters
     "go.lintFlags": [
         "--disable-all",
-        "--enable=vet",
-        // "--enable=deadcode",
-        "--enable=golint",
-        // "--enable=varcheck",
-        // "--enable=structcheck",
-        // "--enable=errcheck",
-        "--enable=ineffassign",
-        "--enable=interfacer",
-        // "--enable=unconvert",
-        "--enable=goconst",
+        "--enable=deadcode",
+        "--enable=errcheck",
         "--enable=gosimple",
+        "--enable=govet",
+        "--enable=golint",
+        "--enable=ineffassign",
         "--enable=staticcheck",
+        "--enable=structcheck",
+        "--enable=typecheck",
+        "--enable=unused",
+        "--enable=varcheck",
+        "--enable=interfacer",
+        "--enable=gosec",
+        "--enable=dupl",
         "--enable=goconst",
-        // "--enable=lll",
+        "--enable=goimports",
+        "--enable=misspell",
+        "--enable=unparam",
+        "--enable=lll",
         "--line-length=80",
-        "--enable=misspell"
-        // "--enable=unused"
     ],
     "go.vetOnSave": "package",
     "go.coverOnSave": true,
@@ -44,6 +47,7 @@
     "editor.fontSize": 12,
     "terminal.integrated.fontFamily": "Hack, Menlo, Monaco, Consolas, \"Droid Sans Mono\", \"Courier New\", monospace, \"Droid Sans Fallback\"",
     "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
     "window.zoomLevel": 0,
     "search.useIgnoreFiles": false,
     "workbench.editor.enablePreview": false,
@@ -71,17 +75,31 @@
         "*.spec": "RPMSpec"
     },
     "editor.minimap.enabled": false,
-    "diffEditor.renderSideBySide": false,
     "editor.fontLigatures": true,
     "gitlab.instanceUrl": "https://git.liquidweb.com",
     "material-icon-theme.showUpdateMessage": false,
-    "workbench.editor.labelFormat": "short",
+    "workbench.editor.labelFormat": "medium",
     "git.enableSmartCommit": true,
+    "git.enableCommitSigning": true,
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": false,
     "window.titleBarStyle": "custom",
     "workbench.editor.showTabs": true,
     "window.newWindowDimensions": "inherit",
     "workbench.settings.editor": "json",
-    "workbench.statusBar.visible": true
+    "workbench.statusBar.visible": true,
+    "zenMode.hideActivityBar": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.hideTabs": false,
+    "editor.parameterHints.enabled": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "go.useLanguageServer": true,
+    "terminal.integrated.rendererType": "dom",
+    "[dockerfile]": {
+        "editor.defaultFormatter": "PeterJausovec.vscode-docker"
+    },
+    "liveshare.featureSet": "insiders"
 }

@@ -1,4 +1,5 @@
 mvdan.cc/sh/cmd/shfmt
+github.com/antonmedv/countdown
 github.com/rakyll/hey
 github.com/rakyll/statik
 github.com/davecheney/httpstat
