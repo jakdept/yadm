@@ -1,3 +1,2 @@
 #!/usr/bin/env sh
-
-git commit --amend -C HEAD
+git commit --amend -C HEAD --reset-author $@
